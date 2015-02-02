@@ -7,9 +7,9 @@ docker pull cedvan/satis:latest
 docker run --name satis -d cedvan/satis:latest
 ```
 
-## Load list of packages
+## Load packages
 
-Download packages will start automatically at start container and every hour
+Download packages from pakagist will start automatically at start container and every hour
 
 ```bash
 docker run --name satis -d \
