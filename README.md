@@ -2,20 +2,17 @@
 
 ## Quick start
 
-```bash
-docker run --name satis -d cedvan/satis:latest
-```
-
-## Load packages
-
 Download packages from pakagist will start automatically at start container and every hour
 
 ```bash
 docker run --name satis -d \
+    -p 8080:80 \
     -v /opt/satis/satis.json:/var/www/satis.json \
     cedvan/satis:latest
 ```
 *cf examples/satis.json*
+
+*index.html* is generated at the end of download packages. So wait for the download to finish first (use ```docker logs satis``` for monitor progress). Next go to localhost:8080
 
 ## Load composer configuration
 
@@ -38,7 +35,7 @@ docker run --name satis -d \
 - Copy token in "composer-config.json"
 - Finished !
 
-## Save Data
+## Save data mirror packages
 
 ```bash
 docker run --name satis -d \
@@ -50,8 +47,9 @@ docker run --name satis -d \
 
 ```bash
 docker run --name satis -d \
+    -p 8443:443
     -e "SATIS_HTTPS=true" \
     -v /opt/satis/certs:/var/www/certs \
     cedvan/satis:latest
 ```
-*add satis.key and satis.crt in folder certs*
+Add **satis.key** and **satis.crt** in folder **certs**
