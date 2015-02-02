@@ -28,11 +28,11 @@ docker run --name satis -d \
 **Generate your github token :**
 
 - Go Settings => Applications
-- Click on "Generate token"
-- Enter "satis" to token descriptin
-- Just checked "repo" and "public_repo"
-- Click on "Generate"
-- Copy token in "composer-config.json"
+- Click on **Generate token**
+- Enter **satis** to token descriptin
+- Just checked **repo** and **public_repo**
+- Click on **Generate**
+- Copy token in **composer-config.json**
 - Finished !
 
 ## Save data mirror packages
