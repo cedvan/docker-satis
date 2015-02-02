@@ -7,6 +7,7 @@ RUN apt-get update -qq \
         cron \
         curl \
         git \
+        ca-certificates \
         php5-cli \
         php5-intl \
         php5-curl \

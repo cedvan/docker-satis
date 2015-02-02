@@ -11,9 +11,8 @@
     ],
     "require": {
 
-        "symfony/symfony": ">=2.5",
-        "sensio/distribution-bundle": "~3.0",
-        "doctrine/orm": "*"
+        "symfony/symfony": "~2.5",
+        "sensio/distribution-bundle": "~3.0"
 
     },
     "require-dependencies": true
