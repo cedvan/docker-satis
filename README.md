@@ -20,7 +20,7 @@ docker run --name satis -d \
 
 ## Load composer configuration
 
-Necessary to avoid blocking github
+Add token github is necessary to avoid blocking github
 
 ```bash
 docker run --name satis -d \
@@ -31,11 +31,12 @@ docker run --name satis -d \
 
 **Generate your github token :**
 
-- Go Settings/Applications
-- Click on Generate token
-- Enter satis to token descriptin
-- Just check "repo" and "public_repo"
-- Copy token
+- Go Settings => Applications
+- Click on "Generate token"
+- Enter "satis" to token descriptin
+- Just checked "repo" and "public_repo"
+- Click on "Generate"
+- Copy token in "composer-config.json"
 - Finished !
 
 ## Save Data
