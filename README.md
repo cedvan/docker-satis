@@ -1,9 +1,8 @@
 # Docker Satis
 
-## Installation
+## Quick start
 
 ```bash
-docker pull cedvan/satis:latest
 docker run --name satis -d cedvan/satis:latest
 ```
 
