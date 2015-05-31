@@ -53,3 +53,13 @@ docker run --name satis -d \
     cedvan/satis:latest
 ```
 Add **satis.key** and **satis.crt** in folder **certs**
+
+## Enabled SSH Key
+
+```bash
+docker run --name satis -d \
+    -v ~/.ssh:/root/.ssh \
+    cedvan/satis:latest
+```
+
+

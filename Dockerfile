@@ -9,7 +9,8 @@ RUN apt-get update -qq \
         php5-cli \
         php5-intl \
         php5-curl \
-        nginx
+        nginx \
+        openssh-client
 
 # Configure PHP and Nginx
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf \
@@ -30,6 +31,12 @@ RUN cd /opt \
 COPY assets/bin /bin/satis/
 RUN chmod u+x /bin/satis/* \
     && echo "0 * * * * root /bin/satis/launch.sh" >> /etc/crontab
+
+#Configure SSH
+RUN mkdir -p /root/.ssh \
+    && sed -i "s/#   StrictHostKeyChecking ask/    StrictHostKeyChecking no/" /etc/ssh/ssh_config
+
+VOLUME /root/.ssh
 
 WORKDIR /var/www
 
