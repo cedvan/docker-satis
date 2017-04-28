@@ -1,6 +1,14 @@
 FROM ubuntu:14.04
 MAINTAINER dev@cedvan.com
 
+# Install requirements
+RUN apt-get update -qq \
+    && apt-get install -qqy \
+        curl \
+        wget \
+        ca-certificates \
+        unzip
+
 # Install PHP and Nginx
 RUN apt-get update -qq \
     && apt-get install -qqy \
